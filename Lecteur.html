@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    <title>Lecteur de musique</title>
+    <style>
+        body {
+            background-image: url(javascript-music-player/bg.jpg);
+            background-position: center;
+            display: flex;
+            align-items: center;
+            margin-top: 15ch;
+        }
+        .affiche {
+            background-color: #212936b8;
+            width: 350px;
+            height: 520px;
+            border-radius: 20px;
+            padding: 20px 20px 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .play {
+            box-shadow: 0 10px 10px #c93b7636;
+        }
+        .play, .d-flex img, .progress {
+            cursor: pointer;
+        }
+        .bar-shadow {
+            box-shadow: 0 0 10px #c93b76b9;
+        }
+        img {
+            border-radius: 20px;
+        }
+        #name, #author, .small-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        #name {
+            margin-top: 12px;
+            font-size: 1rem;
+            color: #E5E7EB;
+        }
+        #author {
+            font-size: .75rem;
+            color: #4D5562;
+            margin-bottom: 25px;
+        }
+        .progress {
+            height: 4px;
+            margin-bottom: 10px;
+        }
+        .small-text {
+            font-size: .625rem;
+            color: #4D5562;
+        }
+        .play-color {
+            background-color: #C93B76;
+        }
+    </style>
+</head>
+<body>
+    <div class="affiche container">
+        <img src="javascript-music-player/cover-1.png" width="310px" height="300px" alt="">
+        <div id="name">Lost in the City Lights</div>
+        <div id="author">Cosmo Sheldrake</div>
+        <div class="d-flex justify-content-between w-100">
+            <div class="float-start small-text currentTime">02:23</div>
+            <div class="float-end small-text duration">03:15</div>
+        </div>
+        <div class="progress w-100 bar-shadow">
+            <audio src="javascript-music-player/lost-in-city-lights-145038.mp3"></audio>
+            <div class="progress-bar play-color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+        </div>
+        <div class="d-flex">
+            <img src="javascript-music-player/Stop_and_play_fill.svg" id="previous" alt="">
+            <div class="rounded-circle play-color p-2 m-4 play">
+                <img src="javascript-music-player/Play_fill.svg" style="color: white;" alt="">
+            </div>
+            <img src="javascript-music-player/Stop_and_play_fill_reverse.svg" id="next" alt="">
+        </div>
+    </div>
+    <script src="Change.js"></script>
+</body>
+</html>
