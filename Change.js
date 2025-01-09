@@ -57,7 +57,7 @@
         if (song > 0) {
             if (!audio.paused) {
                 clearInterval(play)
-                document.querySelector('.play img').setAttribute('src', 'javascript-music-player/play_fill.svg')
+                document.querySelector('.play img').setAttribute('src', 'javascript-music-player/Play_fill.svg')
             }
             song = song - 1
             reinit()
@@ -67,7 +67,7 @@
         if (song < songs.length - 1) {
             if (!audio.paused) {
                 clearInterval(play)
-                document.querySelector('.play img').setAttribute('src', 'javascript-music-player/play_fill.svg')
+                document.querySelector('.play img').setAttribute('src', 'javascript-music-player/Play_fill.svg')
             }
             song = song + 1
             reinit()
@@ -101,7 +101,7 @@
 
     audio.addEventListener('ended', function () {
         clearInterval(play)
-        document.querySelector('.play img').setAttribute('src', 'javascript-music-player/play_fill.svg')
+        document.querySelector('.play img').setAttribute('src', 'javascript-music-player/Play_fill.svg')
     })
     
 })()
