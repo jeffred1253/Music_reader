@@ -95,10 +95,10 @@
         } else {
             audio.pause()
             clearInterval(play)
-            document.querySelector('.play img').setAttribute('src', 'javascript-music-player/play_fill.svg')
+            document.querySelector('.play img').setAttribute('src', 'javascript-music-player/Play_fill.svg')
         }
     }
-    
+
     audio.addEventListener('ended', function () {
         clearInterval(play)
         document.querySelector('.play img').setAttribute('src', 'javascript-music-player/play_fill.svg')
